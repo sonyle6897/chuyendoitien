@@ -5,20 +5,18 @@
     <title>chuyentien</title>
 </head>
 <body>
-Nhap So Tien: <input type="text" id="gt1">
-
-Tu: <select id="select1">
-    <option value="1">USD</option>
-    <option value="23000">VND</option>
+<input name="Tien" value="" />
+<select name="vao">
+    <option value="23000">vnd</option>
+    <option value="1">usd</option>
 </select>
-Sang: <select id="select2">
-    <option value="1">USD</option>
-    <option value="23000">VND</option>
+<select name="ra">
+    <option value="23000">vnd</option>
+    <option value="1">usd</option>
 </select>
-
-Chuyen Doi: <button type="button" onclick="chuyentien()">Convert</button>
-
-<div id="result"></div>
-<script src="Hmm.js"></script>
+<div id="ketqua">0</div>
+<input type="submit" value="Convert" onclick="(function(){
+        document.getElementById('ketqua').innerHTML =document.getElementsByName('Tien')[0].value * document.getElementsByName('ra')[0].value / document.getElementsByName('vao')[0].value;
+})()">
 </body>
 </html>
